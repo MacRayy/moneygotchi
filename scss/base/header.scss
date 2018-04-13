@@ -1,0 +1,24 @@
+.header {
+	background-color: var(--color-gray-dark);
+	color: var(--color-off-white);
+	display: flex;
+	justify-content: space-between;
+  align-items: center;
+  left: 0;
+  padding: 1.5rem 1rem;
+  position: fixed;
+  right: 0;
+}
+
+.nav {
+  display: flex;
+  flex-basis: 10rem;
+  justify-content: space-between;
+
+	&__btn
+	&__btn:link,
+	&__btn:active,
+	&__btn:visited {
+		color: var(--color-off-white);
+	}
+}
