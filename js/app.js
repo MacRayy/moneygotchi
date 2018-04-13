@@ -2,12 +2,20 @@
 
 import JsonImport from './json-import.js'
 import InputHandler from './inputhandler.js'
+import JsonSummarize from './json-summarize.js'
 
 const App = function() {
-  console.log('alma')
-  InputHandler.subtract()
+  const jsonPath = '../json-data/account_10731833-43130014.json'
+   InputHandler.subtract()
   InputHandler.add()
-  JsonImport.log()
+  const jsonDateInterval = {
+    first: '2018-01-01',
+    last: '2018-04-14'
+  }
+
+  JsonImport.getJsonData(jsonPath, function(response) {
+    console.log(JsonSummarize.JsonSummarize(response, jsonDateInterval))
+  })
 }
 
 App()
