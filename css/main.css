@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+:root {
+  --color-gray-dark: #383535;
+  --color-off-white: #f7f7f7; }
+
 html {
   font-size: 62.5%;
   box-sizing: border-box; }
@@ -27,6 +32,7 @@ footer, header, hgroup, menu, nav, section {
   display: block; }
 
 body {
+  font-family: 'Raleway', sans-serif;
   line-height: 1; }
 
 ol, ul {
@@ -43,3 +49,30 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
+.h1 {
+  font-size: 1.5rem; }
+
+.header {
+  background-color: var(--color-gray-dark);
+  color: var(--color-off-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  left: 0;
+  padding: 1.5rem 1rem;
+  position: fixed;
+  right: 0; }
+
+.nav {
+  display: flex;
+  flex-basis: 10rem;
+  justify-content: space-between; }
+  .nav__btn .nav__btn:link, .nav__btn:active, .nav__btn:visited {
+    color: var(--color-off-white); }
+
+.main {
+  padding-top: 5rem; }

@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
+	font-family: 'Raleway', sans-serif;
 	line-height: 1;
 }
 
@@ -50,4 +51,12 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.h1 {
+	font-size: 1.5rem;
 }
