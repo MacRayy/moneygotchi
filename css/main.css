@@ -143,11 +143,27 @@ a {
   padding: 8rem 5rem 2rem 5rem; }
 
 .moneygotchi-image {
+  position: relative;
   background-size: contain;
   width: 350px;
   height: 350px;
   margin: 0 auto;
   transition: background 1s; }
+
+.moneygotchi-says {
+  position: absolute;
+  top: -1rem; }
+
+.chart-inner-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.chart-inner-text {
+  font-size: 1.5rem;
+  width: 10rem;
+  margin-bottom: 1rem; }
 
 .list-container {
   display: flex;
@@ -162,11 +178,27 @@ a {
   padding: 8rem 5rem 2rem 5rem; }
 
 .moneygotchi-image {
+  position: relative;
   background-size: contain;
   width: 350px;
   height: 350px;
   margin: 0 auto;
   transition: background 1s; }
+
+.moneygotchi-says {
+  position: absolute;
+  top: -1rem; }
+
+.chart-inner-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.chart-inner-text {
+  font-size: 1.5rem;
+  width: 10rem;
+  margin-bottom: 1rem; }
 
 .input-filed-container {
   display: grid;
