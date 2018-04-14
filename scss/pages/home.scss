@@ -3,17 +3,13 @@
 }
 
 .moneygotchi-image {
-	background: url('../assets/img/moneygotchi_isover.png');
 	background-size: contain;
 	width: 350px;
 	height: 350px;
 	margin: 0 auto;
-
+	transition: background 1s
 }
 
 .input-field-container {
-	
+
 }
-
-
-
