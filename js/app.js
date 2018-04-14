@@ -122,8 +122,8 @@ const App = function() {
     inputMinus.addEventListener("click", inputDataMinus)
 
   })
-
-
 }
 
 App()
+
+
