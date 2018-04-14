@@ -116,7 +116,7 @@ const App = function() {
       if(moneyGotchiEmoPower < 10) {
         moneygotchiImage.style.background = "url('../assets/img/moneygotchi_isover.png')";
         moneygotchiTalk.innerHTML = "";
-        moneygotchiTalk.innerHTML = "I can not stand it any more! I am leaving!";
+        moneygotchiTalk.innerHTML = "I can't stand it any more!";
       }
       if(moneyGotchiEmoPower > 10 && moneyGotchiEmoPower < 25) {
         moneygotchiImage.style.background = "url('../assets/img/moneygotchi_istired.png')";
@@ -131,12 +131,12 @@ const App = function() {
       if(moneyGotchiEmoPower > 35 && moneyGotchiEmoPower < 45) {
         moneygotchiImage.style.background = "url('../assets/img/moneygotchi_worry.png')";
         moneygotchiTalk.innerHTML = "";
-        moneygotchiTalk.innerHTML = "I can not believe you are doing this to me!";
+        moneygotchiTalk.innerHTML = "Oo.. I can't believe you!";
       }
       if(moneyGotchiEmoPower > 45 && moneyGotchiEmoPower < 55) {
         moneygotchiImage.style.background = "url('../assets/img/moneygotchi_isbetter.png')";
         moneygotchiTalk.innerHTML = "";
-        moneygotchiTalk.innerHTML = "We can manage it, it is gonna be fine, baby!";
+        moneygotchiTalk.innerHTML = "It is gonna be fine!";
       }
       if(moneyGotchiEmoPower > 55 && moneyGotchiEmoPower < 65) {
         moneygotchiImage.style.background = "url('../assets/img/moneygotchi_isblinking.png')";
@@ -151,7 +151,7 @@ const App = function() {
       if(moneyGotchiEmoPower > 75 && moneyGotchiEmoPower < 85) {
         moneygotchiImage.style.background = "url('../assets/img/moneygotchi_excitment.png')";
         moneygotchiTalk.innerHTML = "";
-        moneygotchiTalk.innerHTML = "I can not wait to see you again!";
+        moneygotchiTalk.innerHTML = "I can't wait to see you again!";
       }
       if(moneyGotchiEmoPower > 85 && moneyGotchiEmoPower < 90) {
         moneygotchiImage.style.background = "url('../assets/img/moneygotchi_ispartying.png')";
@@ -161,7 +161,7 @@ const App = function() {
       if(moneyGotchiEmoPower > 90 && moneyGotchiEmoPower < 100) {
         moneygotchiImage.style.background = "url('../assets/img/moneygotchi_islove.png')";
         moneygotchiTalk.innerHTML = "";
-        moneygotchiTalk.innerHTML = "Earth is a heaven with you! I could not ask for more!";
+        moneygotchiTalk.innerHTML = "Earth is a heaven with you!";
       }
     }
 
@@ -178,11 +178,11 @@ const App = function() {
         percent = 100;
       }
       diagramPercent = 90 + 360 / 100 * percent;
-      right1.style.background = 'linear-gradient(' + diagramPercent + 'deg, tomato 50%, rgb(71, 209, 71) 50%)';
+      right1.style.background = 'linear-gradient(' + diagramPercent + 'deg, tomato 50%, #68E397 50%)';
       if (percent > 50) {
-        left1.style.background = 'linear-gradient(90deg, transparent 50%, tomato 50%)';
+        left1.style.background = 'linear-gradient(90deg, transparent 50%, #FF6B6B 50%)';
       } else {
-        left1.style.background = 'linear-gradient(90deg, rgb(71, 209, 71) 50%, transparent 50%)';
+        left1.style.background = 'linear-gradient(90deg, #68E397 50%, transparent 50%)';
       }
 
       incomeText.innerHTML = 'Income: ' + income + ' HUF'

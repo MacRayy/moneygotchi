@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<script src="http://d3js.org/d3.v3.min.js"></script>
-
+		<link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
 		<link rel="stylesheet" href="css/main.css">
 
 		<title>MoneyGotchi</title>
@@ -15,7 +15,7 @@
 	<body>
 		<header class="header">
 			<nav class="nav">
-				<a class="nav__btn" href="#moneygotchi">moneygotchi</a>
+				<a class="nav__btn" href="#moneygotchi" class="moneygotchi-logo">moneygotchi</a>
 				<a class="nav__btn" href="#input">input</a>
 				<a class="nav__btn" href="#pie-chart">pie-chart</a>
 				<a class="nav__btn" href="#statement">statement</a>
@@ -24,10 +24,11 @@
 
 		<main class="main">
 			<section id="moneygotchi" class="moneygotchi">
-        <div id="moneygotchi-image-id" class="moneygotchi-image"><span class="moneygotchi-says"></span></div>
+      	<div id="input"></div>
+        <div id="moneygotchi-image-id" class="moneygotchi-image"><span class="moneygotchi-says speech-bubble"></span></div>
 			</section>
 
-      <section id="input" class="input-filed-container">
+      <section class="input-filed-container">
         <input id="input-field" class="input input-field" type="number" required="required">
         <label for="input-field" class="input-label">Add your income or expense</label>
         <button id="input-plus" class="btn btn-plus"></button>
