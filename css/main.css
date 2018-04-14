@@ -200,6 +200,14 @@ a {
 #outcome-text {
   color: var(--color-red); }
 
+.footer {
+  background-color: var(--color-gray-dark);
+  color: var(--color-off-white);
+  padding: 2rem;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center; }
+
 .statement {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -300,6 +308,14 @@ a {
 
 #outcome-text {
   color: var(--color-red); }
+
+.footer {
+  background-color: var(--color-gray-dark);
+  color: var(--color-off-white);
+  padding: 2rem;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center; }
 
 .input-filed-container {
   display: grid;

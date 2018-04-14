@@ -60,3 +60,11 @@
 	color: var(--color-red);
 }
 
+.footer {
+  background-color: var(--color-gray-dark);
+  color: var(--color-off-white);
+  padding: 2rem;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
