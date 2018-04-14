@@ -13,6 +13,8 @@ const App = function() {
     const monthButton = document.getElementById('month-button');
     const yearButton = document.getElementById('year-button');
     const moneygotchiImage = document.getElementById('moneygotchi-image-id');
+    const listColumnIncome = document.getElementById('list-column-income');
+    const listColumnOutcome = document.getElementById('list-column-outcome');
 
 
     let jsonDateInterval = {
@@ -20,7 +22,8 @@ const App = function() {
       last: '2017-04-14'
     }
 
-    let balance = JsonSummarize.JsonSummarize(response, jsonDateInterval)
+    let balance = JsonSummarize.JsonSummarize(response, jsonDateInterval)[0]
+    let transfers = JsonSummarize.JsonSummarize(response, jsonDateInterval)[1]
     let income = balance[0]
     let outcome = balance[1]
 
@@ -29,10 +32,12 @@ const App = function() {
         first: '2017-04-14',
         last: '2017-04-14'
       }
-      balance = JsonSummarize.JsonSummarize(response, jsonDateInterval)
+      balance = JsonSummarize.JsonSummarize(response, jsonDateInterval)[0]
+      transfers = JsonSummarize.JsonSummarize(response, jsonDateInterval)[1]
       income = balance[0]
       outcome = balance[1]
       inputHandler()
+      listCreator()
     }
 
     let datePicker2 = function() {
@@ -40,10 +45,12 @@ const App = function() {
         first: '2017-04-08',
         last: '2017-04-14'
       }
-      balance = JsonSummarize.JsonSummarize(response, jsonDateInterval)
+      balance = JsonSummarize.JsonSummarize(response, jsonDateInterval)[0]
+      transfers = JsonSummarize.JsonSummarize(response, jsonDateInterval)[1]
       income = balance[0]
       outcome = balance[1]
       inputHandler()
+      listCreator()
     }
 
     let datePicker3 = function() {
@@ -51,10 +58,12 @@ const App = function() {
         first: '2017-03-15',
         last: '2017-04-14'
       }
-      balance = JsonSummarize.JsonSummarize(response, jsonDateInterval)
+      balance = JsonSummarize.JsonSummarize(response, jsonDateInterval)[0]
+      transfers = JsonSummarize.JsonSummarize(response, jsonDateInterval)[1]
       income = balance[0]
       outcome = balance[1]
       inputHandler()
+      listCreator()
     }
 
     let datePicker4 = function() {
@@ -62,10 +71,12 @@ const App = function() {
         first: '2016-04-14',
         last: '2017-04-14'
       }
-      balance = JsonSummarize.JsonSummarize(response, jsonDateInterval)
+      balance = JsonSummarize.JsonSummarize(response, jsonDateInterval)[0]
+      transfers = JsonSummarize.JsonSummarize(response, jsonDateInterval)[1]
       income = balance[0]
       outcome = balance[1]
       inputHandler()
+      listCreator()
     }
 
     todayButton.addEventListener("click", datePicker1)
@@ -73,7 +84,6 @@ const App = function() {
     monthButton.addEventListener("click", datePicker3)
     yearButton.addEventListener("click", datePicker4)
 
-    console.log(JsonSummarize.JsonSummarize(response, jsonDateInterval))
     const right1 = document.getElementById('sector-1-right-id');
     const left1 = document.getElementById('sector-1-left-id');
     const incomeText = document.getElementById('income-text');
@@ -86,12 +96,14 @@ const App = function() {
       income += Number(inputField.value)
       inputField.value = ''
       inputHandler()
+      listCreator()
     }
 
     let inputDataMinus = function () {
       outcome -= Number(inputField.value)
       inputField.value = ''
       inputHandler()
+      listCreator()
     }
 
 
@@ -161,6 +173,49 @@ const App = function() {
     inputHandler()
     inputPlus.addEventListener("click", inputDataPlus)
     inputMinus.addEventListener("click", inputDataMinus)
+
+    const listCreator = function() {
+      listColumnIncome.innerHTML = 'Income'
+      listColumnOutcome.innerHTML = 'Expensives'
+      console.log(transfers)
+
+      transfers.income.forEach(function(element) {
+        let oneRow = document.createElement("div");
+
+        let date = document.createElement("span");
+        date.innerHTML = element.date
+        oneRow.appendChild(date);
+
+        let category = document.createElement("span");
+        category.innerHTML = element.category
+        oneRow.appendChild(category);
+
+        let amount = document.createElement("span");
+        amount.innerHTML = element.amount
+        oneRow.appendChild(amount);
+
+        listColumnIncome.appendChild(oneRow);
+      });
+
+      transfers.outcome.forEach(function(element) {
+        let oneRow = document.createElement("div");
+
+        let date = document.createElement("span");
+        date.innerHTML = element.date
+        oneRow.appendChild(date);
+
+        let category = document.createElement("span");
+        category.innerHTML = element.category
+        oneRow.appendChild(category);
+
+        let amount = document.createElement("span");
+        amount.innerHTML = element.amount
+        oneRow.appendChild(amount);
+
+        listColumnOutcome.appendChild(oneRow);
+      });
+    }
+    listCreator()
 
   })
 }

@@ -138,3 +138,12 @@ a {
   height: 350px;
   margin: 0 auto;
   transition: background 1s; }
+
+.list-container {
+  display: flex;
+  flex-direction: row; }
+
+.list-column {
+  width: 100%;
+  line-height: 1.5;
+  text-align: center; }
