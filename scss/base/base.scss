@@ -32,7 +32,8 @@ footer, header, hgroup, menu, nav, section {
 body {
 	font-family: 'Raleway', sans-serif;
 	line-height: 1;
-	background: linear-gradient(180deg, #f7f7f7, white);
+	background: linear-gradient(180deg, var(color-off-white), white);
+	color: var(--color-gray-dark);
 }
 
 ol, ul {

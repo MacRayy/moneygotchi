@@ -1,10 +1,63 @@
+.statement {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 2rem 1fr;
+  grid-column-gap: 1rem;
+  grid-row-gap: 3rem;
+  justify-items: center;
+  align-items: center;
+  padding-top: 3rem;
+
+  &__btn {
+  	background: linear-gradient(120deg, transparent 0%, transparent 50%, var(--color-gray-dark) 50%);
+		background-size: 230%;
+		color: var(--color-gray-dark);
+		display: inline-block;
+		font-size: 1.2rem;
+		padding: .5rem .5rem;
+		text-decoration: none;
+		text-transform: uppercase;
+		transition: all .4s;
+		backface-visibility: hidden;
+		cursor: pointer;
+  }
+
+  &__btn:hover {
+		background-position: 100%;
+		color: var(--color-off-white);
+  }
+
+  &__btn--active {
+  	background-position: 100%;
+		color: var(--color-off-white);
+  }
+}
+
 .list-container {
   display: flex;
-  flex-direction: row;
+  grid-row: 2 / -1;
+  grid-column: 1 / -1;
+  justify-self: stretch;
+  justify-content: space-between;
 }
 
 .list-column {
-  width: 100%;
+  flex-basis: 100%;
   line-height: 1.5;
   text-align: center;
+
+  &:first-child {
+  	border-right: 1px solid var(--color-gray-dark);
+  }
 }
+
+.list-column-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+
+  &:nth-child(odd) {
+  	background-color: var(--color-gray-light);
+  }
+}
+
