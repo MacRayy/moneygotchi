@@ -17,8 +17,6 @@ const App = function() {
     const listColumnOutcome = document.getElementById('list-column-outcome');
     const moneygotchiTalk = document.querySelector('.moneygotchi-says');
 
-
-
     let jsonDateInterval = {
       first: '2017-04-14',
       last: '2017-04-14'
@@ -29,7 +27,12 @@ const App = function() {
     let income = balance[0]
     let outcome = balance[1]
 
-    let datePicker1 = function() {
+    const datePicker1 = () => {
+      todayButton.classList.remove('statement__btn--active')
+      weekButton.classList.remove('statement__btn--active')
+      monthButton.classList.remove('statement__btn--active')
+      yearButton.classList.remove('statement__btn--active')
+      event.target.classList.add('statement__btn--active')
       jsonDateInterval = {
         first: '2017-04-14',
         last: '2017-04-14'
@@ -42,7 +45,13 @@ const App = function() {
       listCreator()
     }
 
-    let datePicker2 = function() {
+    const datePicker2 = () => {
+      todayButton.classList.remove('statement__btn--active')
+      weekButton.classList.remove('statement__btn--active')
+      monthButton.classList.remove('statement__btn--active')
+      yearButton.classList.remove('statement__btn--active')
+      event.target.classList.add('statement__btn--active')
+
       jsonDateInterval = {
         first: '2017-04-08',
         last: '2017-04-14'
@@ -55,7 +64,13 @@ const App = function() {
       listCreator()
     }
 
-    let datePicker3 = function() {
+    const datePicker3 = () => {
+      todayButton.classList.remove('statement__btn--active')
+      weekButton.classList.remove('statement__btn--active')
+      monthButton.classList.remove('statement__btn--active')
+      yearButton.classList.remove('statement__btn--active')
+      event.target.classList.add('statement__btn--active')
+
       jsonDateInterval = {
         first: '2017-03-15',
         last: '2017-04-14'
@@ -68,7 +83,13 @@ const App = function() {
       listCreator()
     }
 
-    let datePicker4 = function() {
+    const datePicker4 = () => {
+      todayButton.classList.remove('statement__btn--active')
+      weekButton.classList.remove('statement__btn--active')
+      monthButton.classList.remove('statement__btn--active')
+      yearButton.classList.remove('statement__btn--active')
+      event.target.classList.add('statement__btn--active')
+
       jsonDateInterval = {
         first: '2016-04-14',
         last: '2017-04-14'
@@ -81,35 +102,34 @@ const App = function() {
       listCreator()
     }
 
-    todayButton.addEventListener("click", datePicker1)
-    weekButton.addEventListener("click", datePicker2)
-    monthButton.addEventListener("click", datePicker3)
-    yearButton.addEventListener("click", datePicker4)
+    todayButton.addEventListener('click', datePicker1)
+    weekButton.addEventListener('click', datePicker2)
+    monthButton.addEventListener('click', datePicker3)
+    yearButton.addEventListener('click', datePicker4)
 
-    const right1 = document.getElementById('sector-1-right-id');
-    const left1 = document.getElementById('sector-1-left-id');
-    const incomeText = document.getElementById('income-text');
-    const outcomeText = document.getElementById('outcome-text');
-    const inputField = document.getElementById('input-field');
-    const inputPlus = document.getElementById('input-plus');
-    const inputMinus = document.getElementById('input-minus');
+    const right1 = document.getElementById('sector-1-right-id')
+    const left1 = document.getElementById('sector-1-left-id')
+    const incomeText = document.getElementById('income-text')
+    const outcomeText = document.getElementById('outcome-text')
+    const inputField = document.getElementById('input-field')
+    const inputPlus = document.getElementById('input-plus')
+    const inputMinus = document.getElementById('input-minus')
 
-    let inputDataPlus = function () {
+    const inputDataPlus = () => {
       income += Number(inputField.value)
       inputField.value = ''
       inputHandler()
       listCreator()
     }
 
-    let inputDataMinus = function () {
+    const inputDataMinus = () => {
       outcome -= Number(inputField.value)
       inputField.value = ''
       inputHandler()
       listCreator()
     }
 
-
-    let moneygotchiEmotionHandler = function(percent) {
+    const moneygotchiEmotionHandler = percent => {
       let moneyGotchiEmoPower = 100 - percent
       console.log(moneyGotchiEmoPower)
 
@@ -165,17 +185,17 @@ const App = function() {
       }
     }
 
-    let diagramPercent = 0;
-    let inputHandler = () => {
+    let diagramPercent = 0
+    const inputHandler = () => {
 
       if (income === 0 && outcome === 0) {
         income = 2
         outcome = 1
       }
 
-      let percent = Math.abs(outcome) / income * 100;
+      let percent = Math.abs(outcome) / income * 100
       if (percent > 100) {
-        percent = 100;
+        percent = 100
       }
       diagramPercent = 90 + 360 / 100 * percent;
       right1.style.background = 'linear-gradient(' + diagramPercent + 'deg, tomato 50%, #68E397 50%)';
@@ -190,52 +210,53 @@ const App = function() {
       moneygotchiEmotionHandler(percent)
     }
     inputHandler()
-    inputPlus.addEventListener("click", inputDataPlus)
-    inputMinus.addEventListener("click", inputDataMinus)
+    inputPlus.addEventListener('click', inputDataPlus)
+    inputMinus.addEventListener('click', inputDataMinus)
 
-    const listCreator = function() {
+    const listCreator = () => {
       listColumnIncome.innerHTML = 'Income'
       listColumnOutcome.innerHTML = 'Expensives'
       console.log(transfers)
 
-      transfers.income.forEach(function(element) {
-        let oneRow = document.createElement("div");
+      transfers.income.forEach(element => {
+        let oneRow = document.createElement('div')
+        oneRow.classList.add('list-column-row')
 
-        let date = document.createElement("span");
+        let date = document.createElement('span')
         date.innerHTML = element.date
-        oneRow.appendChild(date);
+        oneRow.appendChild(date)
 
-        let category = document.createElement("span");
+        let category = document.createElement('span')
         category.innerHTML = element.category
-        oneRow.appendChild(category);
+        oneRow.appendChild(category)
 
-        let amount = document.createElement("span");
+        let amount = document.createElement('span')
         amount.innerHTML = element.amount
-        oneRow.appendChild(amount);
+        oneRow.appendChild(amount)
 
-        listColumnIncome.appendChild(oneRow);
-      });
+        listColumnIncome.appendChild(oneRow)
+      })
 
-      transfers.outcome.forEach(function(element) {
-        let oneRow = document.createElement("div");
+      transfers.outcome.forEach(element => {
+        let oneRow = document.createElement('div')
+        oneRow.classList.add('list-column-row')
 
-        let date = document.createElement("span");
+        let date = document.createElement('span')
         date.innerHTML = element.date
-        oneRow.appendChild(date);
+        oneRow.appendChild(date)
 
-        let category = document.createElement("span");
+        let category = document.createElement('span')
         category.innerHTML = element.category
-        oneRow.appendChild(category);
+        oneRow.appendChild(category)
 
-        let amount = document.createElement("span");
+        let amount = document.createElement('span')
         amount.innerHTML = element.amount
-        oneRow.appendChild(amount);
+        oneRow.appendChild(amount)
 
-        listColumnOutcome.appendChild(oneRow);
-      });
+        listColumnOutcome.appendChild(oneRow)
+      })
     }
     listCreator()
-
   })
 }
 
