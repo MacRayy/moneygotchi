@@ -79,9 +79,10 @@ a {
     color: var(--color-off-white); }
 
 .main {
-  padding-top: 5rem;
+  padding-top: 6rem;
   display: grid;
-  justify-content: center; }
+  justify-content: center;
+  grid-gap: 1rem; }
 
 .diagram-container {
   border-radius: 50%;
@@ -133,12 +134,13 @@ a {
   text-align: center; }
 
 .main {
-  padding-top: 5rem;
+  padding-top: 6rem;
   display: grid;
-  justify-content: center; }
+  justify-content: center;
+  grid-gap: 1rem; }
 
 .moneygotchi {
-  padding: 100px 50px 20px 50px; }
+  padding: 8rem 5rem 2rem 5rem; }
 
 .moneygotchi-image {
   background-size: contain;
@@ -157,7 +159,7 @@ a {
   text-align: center; }
 
 .moneygotchi {
-  padding: 100px 50px 20px 50px; }
+  padding: 8rem 5rem 2rem 5rem; }
 
 .moneygotchi-image {
   background-size: contain;
