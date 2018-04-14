@@ -147,3 +147,13 @@ a {
   width: 100%;
   line-height: 1.5;
   text-align: center; }
+
+.moneygotchi {
+  padding: 100px 50px 20px 50px; }
+
+.moneygotchi-image {
+  background-size: contain;
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+  transition: background 1s; }
