@@ -7,30 +7,29 @@
 		<script src="http://d3js.org/d3.v3.min.js"></script>
 
 		<link rel="stylesheet" href="css/main.css">
+		<link href="https://fonts.googleapis.com/css?family=Cabin|Gugi" rel="stylesheet">
 
 		<title>MoneyGotchi</title>
 
-
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
-
 	</head>
 	<body>
 		<header class="header">
-			<h1 class="h1">MoneyGotchi</h1>
 			<nav class="nav">
-				<a class="nav__btn" href="#">pie-chart</a>
-				<a class="nav__btn" href="#">statement</a>
+				<a href="#moneygotchi">moneygotchi</a>
+				<a href="#input">input</a>
+				<a class="nav__btn" href="#pie-chart">pie-chart</a>
+				<a class="nav__btn" href="#statement">statement</a>
 			</nav>
 		</header>
 
 		<main class="main">
-			<section class="moneygotchi">
-        <div class="moneygotchi-image">moneygotchi-image</div>
+			<section id="moneygotchi" class="moneygotchi">
+        <div class="moneygotchi-image"></div>
 			</section>
 
-      <section class="input-filed-container">
-        <label for="input-field">Label</label>
+      <section id="input" class="input-filed-container">
+        <!-- <label for="input-field">Label</label> -->
         <input id="input-field" type="number">
         <button id="input-plus" class="btn btn-plus">+</button>
         <button id="input-minus" class="btn btn-minus">-</button>
@@ -38,6 +37,7 @@
 
 			<section id="pie-chart" class="pie-chart">
         <span>pie-chart</span>
+				<!-- <div id="pieChart"></div> -->
 			</section>
 
       <section id="statement" class="statement">
@@ -68,10 +68,7 @@
 			  </div>
 			</div>
     </main>
-		<div id="myFrame">
 			
-			<div id="pieChart"></div>
-		</div>
     <footer class="footer">
       <span>footer</span>
     </footer>
