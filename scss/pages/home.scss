@@ -3,9 +3,60 @@
 }
 
 .moneygotchi-image {
+	position: relative;
 	background-size: contain;
 	width: 350px;
 	height: 350px;
 	margin: 0 auto;
 	transition: background 1s
 }
+
+.moneygotchi-says {
+	position: absolute;
+	// margin: 0 0 10rem 1rem;
+	top: -1rem;
+}
+
+.speech-bubble {
+	position: relative;
+	background: var(--color-yellow);
+	border-radius: .4em;
+	padding: 1.5rem 1rem;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 44px solid transparent;
+	border-top-color: var(--color-yellow);
+	border-bottom: 0;
+	border-right: 0;
+	margin-left: -22px;
+	margin-bottom: -30px;
+}
+
+.chart-inner-text-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.chart-inner-text {
+	font-size: 1.5rem;
+	width: 10rem;
+	margin-bottom: 1rem;
+}
+
+#income-text {
+	color: var(--color-green);
+}
+
+#outcome-text {
+	color: var(--color-red);
+}
+

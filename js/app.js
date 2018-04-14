@@ -15,6 +15,8 @@ const App = function() {
     const moneygotchiImage = document.getElementById('moneygotchi-image-id');
     const listColumnIncome = document.getElementById('list-column-income');
     const listColumnOutcome = document.getElementById('list-column-outcome');
+    const moneygotchiTalk = document.querySelector('.moneygotchi-says');
+
 
 
     let jsonDateInterval = {
@@ -113,36 +115,53 @@ const App = function() {
 
       if(moneyGotchiEmoPower < 10) {
         moneygotchiImage.style.background = "url('../assets/img/moneygotchi_isover.png')";
+        moneygotchiTalk.innerHTML = "";
+        moneygotchiTalk.innerHTML = "I can't stand it any more!";
       }
       if(moneyGotchiEmoPower > 10 && moneyGotchiEmoPower < 25) {
         moneygotchiImage.style.background = "url('../assets/img/moneygotchi_istired.png')";
+        moneygotchiTalk.innerHTML = "";
+        moneygotchiTalk.innerHTML = "Please do not do this, we are in danger!";
       }
       if(moneyGotchiEmoPower > 25 && moneyGotchiEmoPower < 35) {
         moneygotchiImage.style.background = "url('../assets/img/moneygotchi_ismad.png')";
+        moneygotchiTalk.innerHTML = "";
+        moneygotchiTalk.innerHTML = "I have nothing left to say!";
       }
       if(moneyGotchiEmoPower > 35 && moneyGotchiEmoPower < 45) {
         moneygotchiImage.style.background = "url('../assets/img/moneygotchi_worry.png')";
+        moneygotchiTalk.innerHTML = "";
+        moneygotchiTalk.innerHTML = "Oo.. I can't believe you!";
       }
       if(moneyGotchiEmoPower > 45 && moneyGotchiEmoPower < 55) {
         moneygotchiImage.style.background = "url('../assets/img/moneygotchi_isbetter.png')";
+        moneygotchiTalk.innerHTML = "";
+        moneygotchiTalk.innerHTML = "It is gonna be fine!";
       }
       if(moneyGotchiEmoPower > 55 && moneyGotchiEmoPower < 65) {
         moneygotchiImage.style.background = "url('../assets/img/moneygotchi_isblinking.png')";
+        moneygotchiTalk.innerHTML = "";
+        moneygotchiTalk.innerHTML = "I am sooo proud of you!";
       }
       if(moneyGotchiEmoPower > 65 && moneyGotchiEmoPower < 75) {
         moneygotchiImage.style.background = "url('../assets/img/moneygotchi_satisfaction.png')";
+        moneygotchiTalk.innerHTML = "";
+        moneygotchiTalk.innerHTML = "We are getting there!";
       }
       if(moneyGotchiEmoPower > 75 && moneyGotchiEmoPower < 85) {
         moneygotchiImage.style.background = "url('../assets/img/moneygotchi_excitment.png')";
+        moneygotchiTalk.innerHTML = "";
+        moneygotchiTalk.innerHTML = "I can't wait to see you again!";
       }
       if(moneyGotchiEmoPower > 85 && moneyGotchiEmoPower < 90) {
         moneygotchiImage.style.background = "url('../assets/img/moneygotchi_ispartying.png')";
-      }
-      if(moneyGotchiEmoPower > 85 && moneyGotchiEmoPower < 90) {
-        moneygotchiImage.style.background = "url('../assets/img/moneygotchi_ispartying.png')";
+        moneygotchiTalk.innerHTML = "";
+        moneygotchiTalk.innerHTML = "You are the best ever!";
       }
       if(moneyGotchiEmoPower > 90 && moneyGotchiEmoPower < 100) {
         moneygotchiImage.style.background = "url('../assets/img/moneygotchi_islove.png')";
+        moneygotchiTalk.innerHTML = "";
+        moneygotchiTalk.innerHTML = "Earth is a heaven with you!";
       }
     }
 
@@ -159,11 +178,11 @@ const App = function() {
         percent = 100;
       }
       diagramPercent = 90 + 360 / 100 * percent;
-      right1.style.background = 'linear-gradient(' + diagramPercent + 'deg, tomato 50%, rgb(71, 209, 71) 50%)';
+      right1.style.background = 'linear-gradient(' + diagramPercent + 'deg, tomato 50%, #68E397 50%)';
       if (percent > 50) {
-        left1.style.background = 'linear-gradient(90deg, transparent 50%, tomato 50%)';
+        left1.style.background = 'linear-gradient(90deg, transparent 50%, #FF6B6B 50%)';
       } else {
-        left1.style.background = 'linear-gradient(90deg, rgb(71, 209, 71) 50%, transparent 50%)';
+        left1.style.background = 'linear-gradient(90deg, #68E397 50%, transparent 50%)';
       }
 
       incomeText.innerHTML = 'Income: ' + income + ' HUF'
