@@ -3,20 +3,22 @@
 const JsonSummarize = (function() {
 
   const JsonSummarize = (jsonInput, jsonDateInterval) => {
-    let balance = 0
-    
+    let income = 0
+    let outcome = 0
+
     jsonInput.income.forEach( transfer => {
       if(jsonDateInterval.first <= transfer.date && jsonDateInterval.last >= transfer.date) {
-        balance += transfer.amount
+        income += transfer.amount
       }
     })
 
     jsonInput.outcome.forEach( transfer => {
       if(jsonDateInterval.first <= transfer.date && jsonDateInterval.last >= transfer.date) {
-        balance += transfer.amount
+        outcome += transfer.amount
       }
     })
 
+    let balance = [income, outcome]
     return balance
   }
 

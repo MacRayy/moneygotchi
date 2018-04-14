@@ -7,6 +7,11 @@
 		<link rel="stylesheet" href="css/main.css">
 
 		<title>MoneyGotchi</title>
+
+
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
 	</head>
 	<body>
 		<header class="header">
@@ -25,8 +30,8 @@
       <section class="input-filed-container">
         <label for="input-field">Label</label>
         <input id="input-field" type="number">
-        <button class="btn btn-plus">+</button>
-        <button class="btn btn-minus">-</button>
+        <button id="input-plus" class="btn btn-plus">+</button>
+        <button id="input-minus" class="btn btn-minus">-</button>
       </section>
 
 			<section id="pie-chart" class="pie-chart">
@@ -36,6 +41,30 @@
       <section id="statement" class="statement">
         <span>statement</span>
       </section>
+			<!-- Chart html element -->
+			<div id="today-button">Today</div>
+			<div id="week-button">Last Week</div>
+			<div id="month-button">Last Month</div>
+			<div id="year-button">Last Year</div>
+
+			<div class="diagram-container">
+			  <div class="sector-1">
+			    <div id="sector-1-right-id" class="sector-1-right">
+			    </div>
+			    <div id="sector-1-left-id" class="sector-1-left">
+			    </div>
+			  </div>
+				<div class="sector-1">
+					<div id="sector-2-right-id" class="sector-2-right">
+					</div>
+					<div id="sector-2-left-id" class="sector-2-left">
+					</div>
+				</div>
+			  <div class="inner-circle">
+					<p class="chart-inner-text" id="income-text"></p>
+					<p class="chart-inner-text" id="outcome-text"></p>
+			  </div>
+			</div>
     </main>
 
     <footer class="footer">
