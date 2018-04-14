@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 :root {
   --color-gray-dark: #706d6d;
-  --color-off-white: #f7f7f7; }
+  --color-off-white: #f7f7f7;
+  --color-green: #68E397;
+  --color-red: #FF6B6B;
+  --color-yellow: #f6c73c; }
 
 html {
   font-size: 62.5%;
@@ -52,7 +55,8 @@ table {
   border-spacing: 0; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: var(--color-off-white); }
 
 .h1 {
   font-size: 1.5rem; }
@@ -63,19 +67,21 @@ a {
   left: 0;
   padding: 1.5rem 1rem;
   position: fixed;
-  right: 0; }
+  right: 0;
+  z-index: 100; }
 
 .nav {
   display: flex;
   justify-content: space-evenly;
-  padding: 20px;
+  padding: 1rem 0;
   width: 100%; }
   .nav__btn .nav__btn:link, .nav__btn:active, .nav__btn:visited {
-    color: var(--color-off-white);
-    font-size: 2.5rem; }
+    color: var(--color-off-white); }
 
 .main {
-  padding-top: 5rem; }
+  padding-top: 5rem;
+  display: grid;
+  justify-content: center; }
 
 .diagram-container {
   border-radius: 50%;
@@ -127,7 +133,9 @@ a {
   text-align: center; }
 
 .main {
-  padding-top: 5rem; }
+  padding-top: 5rem;
+  display: grid;
+  justify-content: center; }
 
 .moneygotchi {
   padding: 100px 50px 20px 50px; }
@@ -147,3 +155,59 @@ a {
   width: 100%;
   line-height: 1.5;
   text-align: center; }
+
+.moneygotchi {
+  padding: 100px 50px 20px 50px; }
+
+.moneygotchi-image {
+  background-size: contain;
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+  transition: background 1s; }
+
+.input-filed-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  position: relative;
+  padding-bottom: 2rem; }
+
+.input {
+  border: 0;
+  background-color: transparent;
+  color: var(--color-yellow); }
+  .input:focus {
+    outline: none;
+    caret-color: var(--color-yellow);
+    border-bottom: 1px solid var(--color-yellow); }
+  .input-label {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scale(1.5) translateY(100%);
+    transition: all .3s ease;
+    top: -1rem; }
+  .input:focus + .input-label,
+  .input:valid + .input-label {
+    transform: translateX(-50%) scale(0.9) translateY(0); }
+  .input-field {
+    grid-column: 1 / -1;
+    font-size: 2rem;
+    font-family: inherit; }
+
+.btn {
+  border: 0;
+  padding: 3.5rem;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
+  align-self: center;
+  justify-self: center; }
+  .btn:focus {
+    outline: 0; }
+  .btn-plus {
+    background-image: url("../assets/icons/plus-button.svg"); }
+  .btn-minus {
+    background-image: url("../assets/icons/minus-button.svg"); }
