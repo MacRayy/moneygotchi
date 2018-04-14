@@ -198,7 +198,7 @@ const App = function() {
         percent = 100
       }
       diagramPercent = 90 + 360 / 100 * percent;
-      right1.style.background = 'linear-gradient(' + diagramPercent + 'deg, tomato 50%, #68E397 50%)';
+      right1.style.background = 'linear-gradient(' + diagramPercent + 'deg, #FF6B6B 50%, #68E397 50%)';
       if (percent > 50) {
         left1.style.background = 'linear-gradient(90deg, transparent 50%, #FF6B6B 50%)';
       } else {
