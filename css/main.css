@@ -75,13 +75,15 @@ a {
 .nav {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   padding: 1rem 0;
   width: 100%; }
   .nav__btn .nav__btn:link, .nav__btn:active, .nav__btn:visited {
     color: var(--color-off-white); }
 
-.moneygotchi-logo {
-  font-family: 'Gugi', cursive !important; }
+.logo {
+  font-family: 'Gugi', cursive;
+  font-size: 2.5rem; }
 
 .main {
   padding-top: 6rem;
@@ -147,7 +149,7 @@ a {
   grid-template-column: 70vw; }
 
 .moneygotchi {
-  padding: 8rem 5rem 2rem 5rem; }
+  padding: 13rem 5rem 2rem 5rem; }
 
 .moneygotchi-image {
   position: relative;
@@ -248,7 +250,7 @@ a {
     background-color: var(--color-gray-light); }
 
 .moneygotchi {
-  padding: 8rem 5rem 2rem 5rem; }
+  padding: 13rem 5rem 2rem 5rem; }
 
 .moneygotchi-image {
   position: relative;
