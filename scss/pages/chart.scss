@@ -1,0 +1,54 @@
+.diagram-container {
+  border-radius: 50%;
+  height: 400px;
+  margin: auto;
+  margin-top: 50px;
+  overflow: hidden;
+  position: relative;
+  width: 400px;
+}
+
+.inner-circle {
+  background-color: white;
+  border-radius: 50%;
+  height: 150px;
+  padding-top: 100px;
+  position: absolute;
+  width: 250px;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.sector-1 {
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  width: 100%;
+}
+
+.sector-1-right {
+  background: rgb(71, 209, 71);
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translateY(-50%) translateX(-50%);
+  width: 100%;
+}
+
+.sector-1-left {
+  background: rgb(71, 209, 71);
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translateY(-50%) translateX(-50%);
+  width: 100%;
+}
+
+.chart-inner-text {
+  text-align: center;
+}
