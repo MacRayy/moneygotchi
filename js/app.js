@@ -12,6 +12,8 @@ const App = function() {
     const weekButton = document.getElementById('week-button');
     const monthButton = document.getElementById('month-button');
     const yearButton = document.getElementById('year-button');
+    const moneygotchiImage = document.getElementById('moneygotchi-image-id');
+
 
     let jsonDateInterval = {
       first: '2017-04-14',
@@ -92,8 +94,47 @@ const App = function() {
       inputHandler()
     }
 
-    let diagramPercent = 0;
 
+    let moneygotchiEmotionHandler = function(percent) {
+      let moneyGotchiEmoPower = 100 - percent
+      console.log(moneyGotchiEmoPower)
+
+      if(moneyGotchiEmoPower < 10) {
+        moneygotchiImage.style.background = "url('../assets/img/moneygotchi_isover.png')";
+      }
+      if(moneyGotchiEmoPower > 10 && moneyGotchiEmoPower < 25) {
+        moneygotchiImage.style.background = "url('../assets/img/moneygotchi_istired.png')";
+      }
+      if(moneyGotchiEmoPower > 25 && moneyGotchiEmoPower < 35) {
+        moneygotchiImage.style.background = "url('../assets/img/moneygotchi_ismad.png')";
+      }
+      if(moneyGotchiEmoPower > 35 && moneyGotchiEmoPower < 45) {
+        moneygotchiImage.style.background = "url('../assets/img/moneygotchi_worry.png')";
+      }
+      if(moneyGotchiEmoPower > 45 && moneyGotchiEmoPower < 55) {
+        moneygotchiImage.style.background = "url('../assets/img/moneygotchi_isbetter.png')";
+      }
+      if(moneyGotchiEmoPower > 55 && moneyGotchiEmoPower < 65) {
+        moneygotchiImage.style.background = "url('../assets/img/moneygotchi_isblinking.png')";
+      }
+      if(moneyGotchiEmoPower > 65 && moneyGotchiEmoPower < 75) {
+        moneygotchiImage.style.background = "url('../assets/img/moneygotchi_satisfaction.png')";
+      }
+      if(moneyGotchiEmoPower > 75 && moneyGotchiEmoPower < 85) {
+        moneygotchiImage.style.background = "url('../assets/img/moneygotchi_excitment.png')";
+      }
+      if(moneyGotchiEmoPower > 85 && moneyGotchiEmoPower < 90) {
+        moneygotchiImage.style.background = "url('../assets/img/moneygotchi_ispartying.png')";
+      }
+      if(moneyGotchiEmoPower > 85 && moneyGotchiEmoPower < 90) {
+        moneygotchiImage.style.background = "url('../assets/img/moneygotchi_ispartying.png')";
+      }
+      if(moneyGotchiEmoPower > 90 && moneyGotchiEmoPower < 100) {
+        moneygotchiImage.style.background = "url('../assets/img/moneygotchi_islove.png')";
+      }
+    }
+
+    let diagramPercent = 0;
     let inputHandler = () => {
 
       if (income === 0 && outcome === 0) {
@@ -102,7 +143,6 @@ const App = function() {
       }
 
       let percent = Math.abs(outcome) / income * 100;
-      console.log(percent)
       if (percent > 100) {
         percent = 100;
       }
@@ -116,6 +156,7 @@ const App = function() {
 
       incomeText.innerHTML = 'Income: ' + income + ' HUF'
       outcomeText.innerHTML = 'Outcome: ' + outcome + ' HUF'
+      moneygotchiEmotionHandler(percent)
     }
     inputHandler()
     inputPlus.addEventListener("click", inputDataPlus)
@@ -125,5 +166,3 @@ const App = function() {
 }
 
 App()
-
-
