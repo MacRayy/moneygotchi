@@ -1,3 +1,62 @@
 .input-filed-container {
-	
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.input {
+	border: 0;
+  background-color: transparent;
+  color: var(--color-yellow);
+
+	&:focus {
+		outline: none;
+  	caret-color: var(--color-yellow);
+		border-bottom: 1px solid var(--color-yellow);
+	}
+
+	&-label {
+		position: absolute;
+		left: 50%;
+    transform: translateX(-50%) scale(1.5) translateY(100%);
+    transition: all .3s ease;
+    top: -1rem;
+	}
+
+	&:focus + &-label,
+	&:valid + &-label {
+    transform: translateX(-50%) scale(.9) translateY(0);
+	}
+
+	&-field {
+		grid-column: 1 / -1;
+		font-size: 2rem;
+		font-family: inherit;
+	}
+}
+
+.btn {
+	border: 0;
+	padding: 3.5rem;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
+  align-self: center;
+  justify-self: center;
+
+  &:focus {
+  	outline: 0;
+  }
+
+	&-plus {
+		background-image: url('../assets/icons/plus-button.svg');
+	}
+
+	&-minus {
+		background-image: url('../assets/icons/minus-button.svg');
+	}
 }
